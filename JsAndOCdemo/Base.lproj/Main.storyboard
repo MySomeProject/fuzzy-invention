@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qut-iZ-nnn">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kLk-Cq-cfP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qut-iZ-nnn" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Klf-JW-mzS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d7Q-Gt-v2C"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLj-8q-bYG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-417" y="418"/>
+        </scene>
+        <!--JavaScript和OC调用-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="JavaScript和OC调用" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEv-CX-9xO">
+                                <rect key="frame" x="200" y="296" width="200" height="51"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="rCM-QJ-iUi"/>
+                                    <constraint firstAttribute="height" constant="51" id="za1-S4-0yf"/>
+                                </constraints>
+                                <state key="normal" title="OC调用JavaScript代码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="OCcallbackJs:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dh-dR-812"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJc-JV-2jO">
+                                <rect key="frame" x="200" y="182" width="200" height="51"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="C2B-J6-Osu"/>
+                                    <constraint firstAttribute="height" constant="51" id="bUX-IY-x3s"/>
+                                </constraints>
+                                <state key="normal" title="JavaScript调用OC代码">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="jsCallbackOC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ewO-oh-hV0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qEv-CX-9xO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5aM-us-4rz"/>
+                            <constraint firstItem="yJc-JV-2jO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="AYx-PZ-187"/>
+                            <constraint firstItem="yJc-JV-2jO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TmE-8C-z5G"/>
+                            <constraint firstItem="qEv-CX-9xO" firstAttribute="top" secondItem="yJc-JV-2jO" secondAttribute="bottom" constant="63" id="VMG-xO-F9Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="JavaScript和OC调用" id="oT4-UC-sQ3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="418"/>
+        </scene>
+    </scenes>
+</document>

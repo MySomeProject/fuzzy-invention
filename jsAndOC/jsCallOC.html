@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+        <title>JavaScript调用OC</title>
+    </head>
+    <body bgcolor="antiquewhite">
+        <div id="firstDiv">
+            <p style="color: darkgreen;">点击下面的按钮调用OC中的block函数完成POP动作</p>
+            <br />
+            <button onclick="myAction();" style="accelerator: false;">点击返回主页</button>
+            <br />
+        </div>
+        
+        
+        <div id="secondDiv">
+            <p style="color: darkgreen;">完成参数传值，我们从玩野中获取到html元素的值，然后再oc中对这个值进行处理</p>
+            <input type="text" name="输入框" id="textField" placeholder="输入要传的值"/>
+            <br />
+            <button onclick="log(document.getElementById('textField').value)">打印输入信息</button>
+            
+            <p style="color: darkgreen;">下面主要完成的是调用OC中JSExport协议方法</p>
+            <button onclick="native.myLog();">调用OC中的myLog</button>
+        </div>
+        
+        <div id="thridDiv">
+            <br />
+            <b id="label"></b>
+        </div>
+    </body>
+    
+    <script type="text/javascript">
+        var myObject = "myObject";
+        function labelAction(obj) {
+            document.getElementById('label').innerHTML = obj;
+        }
+    </script>
+
+</html>
